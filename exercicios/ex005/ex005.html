@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com DOM</title>
+    <style>
+        body{
+            background-color: rgb(0, 183, 255);
+            color: white;
+            font: normal 20px arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msn">Click em mim</div>
+
+    <script>
+        window.document.write('Qual é o charset: ' + window.document.charset + '<br>')
+        window.document.write('Navegador: ' + window.navigator.appName + '<br>')
+        window.document.write("Minha URL: " + window.document.URL + '<br>')
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        document.write('Está escrito assim: ' + p1.innerText + '<br>')
+        var corpo = window.document.body
+        var p2 = window.document.getElementsByTagName('p')[1]
+        document.write('Está escrito assim: ' + p2.innerHTML  + '<br>')
+        //window.alert('Está escrito assim: ' + p2.innerHTML)
+        //corpo.style.background = 'green'
+        var msn1 = window.document.getElementById('msn')
+        document.write(msn1.innerText)
+
+        var Cmsg = window.document.querySelector('div#msn')
+        Cmsg.style.color = 'blue'
+    </script>
+</body>
+</html>
